@@ -138,3 +138,7 @@ p{
     font-family: jumble;
     -webkit-text-stroke: 1px #FBFFFF;
 }
+a{
+ position: relative; right: -60px;bottom: -20px;
+color: rgba(153, 153, 153, 0.619);
+}
