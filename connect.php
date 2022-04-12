@@ -1,10 +1,11 @@
 <?php
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $passwrd = $_POST['passwrd'];
+    $servername = "localhost";
+    $username = "username";
+    $email = "email";
+    $passwrd = "passwrd";
 
     //database connection
-    $conn = new mysqli('localhost','root','','Studentdb');
+    $conn = new mysqli_connect($servername,$username,$passwrd);
     if($conn->connect_error){
       die('Connection Failed : '.$conn->connect_error);
 
