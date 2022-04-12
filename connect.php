@@ -1,7 +1,7 @@
 <?php
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $passwrd = $_POST['passwrd'];
 
     //database connection
     $conn = new mysqli('localhost','root','','test');
@@ -9,9 +9,9 @@
       die('Connection Failed : '.$conn->connect_error);
 
     }else{
-      $start = $conn->prepare("insert into registration(username, email, password)
+      $start = $conn->prepare("insert into registration(username, email, passwrd)
                                 values(?,?,?)");
-      $stmt->bind_para("sss",$username, $email, $password);
+      $stmt->bind_para("sss",$username, $email, $passwrd);
       $stmt->execute();
       echo "Registration Successfull!!";
       $stmt->close();
