@@ -1,17 +1,14 @@
 <?php
-    $servername = "localhost";
-    $username = "username";
-    $email = "email";
-    $passwrd = "passwrd";
-
-    //database connection
-try{
-    $conn = new PDO("mysql:host=$servername;dbname=Studentdb",$username,$passwrd);
-    $conn-
-        >setAttribute(PDO::ATTR_ERRMODE,PDOERRMODE_EXCEPTION);
-    echo "Registered successfully";
-} catch(PDOException $e) {
-  echo "Registration Failed" . 
-    $e->getMessage();
-}
+    $host='localhost';
+    $username ='username';
+    $email ='email';
+    $password ='passwrd';
+    $db='studentdb';
+    $con=mysqli_connect($host_$user,$pass,$db);
+    if($con)
+    echo'connected successfully to studentdb database';
+    $sql="insert into(username,email,passwrd)values('Ganesh','ganesha@gmail.com','ganesha169')";
+    $query=mysqli query($con,$sql);
+    if($query)
+    echo'data inserted successfully';
 ?>
