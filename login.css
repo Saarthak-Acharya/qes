@@ -115,6 +115,7 @@ input {
   line-height: 30px;
   outline: none !important;
   width: 100%;
+  position: relative; left: -55px; top: -20px;
 }
 input::-moz-focus-inner { 
   border: 0; 
